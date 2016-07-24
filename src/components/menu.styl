@@ -1,0 +1,51 @@
+$border = rgba(0,0,0,0.2)
+$background = rgba(255,255,255,0.8)
+$addButton = rgba(108, 195, 236, 0.8)
+
+.menu
+	width 50%
+	margin auto
+	padding 0 0 20px
+	display flex
+	*
+		border 1px solid $border
+		border-radius 999em
+		background $background
+		padding 10px
+		margin 0 10px
+		text-align center
+		cursor pointer
+		transition 0.4s
+		flex 1
+		opacity 0.1
+		font-size 14px
+		&.check
+			opacity 0.8
+			box-shadow 0 0 4px $border
+		&:hover
+			box-shadow 0 0 4px $border
+			opacity 1
+	.add
+		flex-grow 0
+		flex-basis 38px
+		border-radius 999em
+		transform scale(0.7)
+		&:before
+			content ""
+			width 2px
+			height 16px
+			background black
+			position absolute
+			top 10px
+			left 17px
+		&:after
+			content ""
+			width 16px
+			height 2px
+			background black
+			position absolute
+			top 17px
+			left 10px
+		&:hover
+			background $addButton
+			transform scale(1)
