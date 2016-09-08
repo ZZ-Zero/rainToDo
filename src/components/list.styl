@@ -3,14 +3,23 @@ $background = rgba(255,255,255,0.9)
 $check = rgba(106, 197, 163, 0.8)
 $delete = rgba(255, 133, 133, 0.8)
 
+::-webkit-scrollbar
+	width 0px
+	
 .listBox
-	padding-top 10px
+	padding 10px 0 60px
 	border-top 1px solid rgba(255,255,255,0.1)
+	position absolute
+	top 86px
+	bottom 0px
+	left 0px
+	right 0px
+	overflow scroll
 	li
-		width 100%
+		width 680px
 		display flex
 		transition 0.4s
-		margin 10px 0
+		margin 10px auto
 		>*
 			height 100%
 			&:first-child

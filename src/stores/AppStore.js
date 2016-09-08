@@ -17,13 +17,19 @@ let AppStore = Object.assign({}, Events.EventEmitter.prototype, {
 		return this.listStore.items
 	},
 	addNewItem: function() {
-		this.listStore.items.unshift('New items')
+		let time = new Date(),
+		inner = {
+			id: time.getTime(),
+			text: 'New items ' + this.getAll().length,
+			check: false
+		}
+		this.listStore.items.unshift(inner)
 	},
 	removeItem: function(nth) {
 		this.listStore.items.splice(nth,1)
 	},
 	changeText: function(nth,text) {
-		this.listStore.items[nth] = text
+		this.listStore.items[nth].text = text
 	},
 	emitChange: function() {
 		this.emit('change')

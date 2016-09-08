@@ -61,8 +61,7 @@ class ListBox extends Component {
 		return(
 			<ol className="listBox">
 				{this.state.items.map((item,nth) => {
-						alert(nth)
-						return <List key={nth} text={item} />
+						return <List key={item.id} text={item.text} />
 					})
 				}
 			</ol>
